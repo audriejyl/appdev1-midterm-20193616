@@ -1,8 +1,7 @@
 <div class="container mt-4">
-  <h2>Task List</h2>
-
-  <table class="table table-bordered">
-    <thead>
+  <h2 class="mb-3">Task List</h2>
+  <table class="table table-striped table-hover shadow-sm">
+    <thead class="table-dark">
       <tr>
         <th>Title</th>
         <th>Status</th>
@@ -10,15 +9,28 @@
         <th>Actions</th>
       </tr>
     </thead>
-
     <tbody>
       <tr *ngFor="let task of tasks">
         <td>{{ task.title }}</td>
-        <td>{{ task.status }}</td>
-        <td>{{ task.priority }}</td>
         <td>
-          <button class="btn btn-info btn-sm" (click)="viewTask(task.id)">View</button>
-          <button class="btn btn-danger btn-sm" (click)="deleteTask(task.id)">Delete</button>
+          <span class="badge bg-info">{{ task.status }}</span>
+        </td>
+        <td>
+          <span 
+            class="badge" 
+            [ngClass]="{
+              'bg-success': task.priority === 'Low',
+              'bg-warning': task.priority === 'Medium',
+              'bg-danger': task.priority === 'High'
+            }">{{ task.priority }}</span>
+        </td>
+        <td>
+          <button class="btn btn-sm btn-primary" (click)="viewTask(task.id)">
+            <i class="fa fa-eye"></i> View
+          </button>
+          <button class="btn btn-sm btn-danger" (click)="deleteTask(task.id)">
+            <i class="fa fa-trash"></i> Delete
+          </button>
         </td>
       </tr>
     </tbody>
