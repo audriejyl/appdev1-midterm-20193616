@@ -1,0 +1,30 @@
+/* task-detail.component.css */
+:host ::ng-deep .task-card {
+  width: 100%;
+  max-width: 700px;
+  padding: 25px 30px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  color: #343a40;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+:host ::ng-deep .task-card h2 {
+  color: #6f42c1;
+  font-weight: 600;
+}
+
+/* Paragraphs */
+:host ::ng-deep .task-card p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Labels */
+:host ::ng-deep .task-card p strong {
+  display: inline-block;
+  width: 100px;
+  color: #6f42c1;
+}

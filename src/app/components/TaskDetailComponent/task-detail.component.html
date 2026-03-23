@@ -1,8 +1,12 @@
-<div class="container mt-4">
-  <h2>Task Detail</h2>
+<div class="d-flex justify-content-center mt-5">
+  <div class="task-container p-4">
+    <h2 class="text-center mb-3">TASK DETAILS</h2>
 
-  <a class="btn btn-info me-2" [routerLink]="['info']">Info</a>
-  <a class="btn btn-warning" [routerLink]="['edit']">Edit</a>
+    <div class="d-flex justify-content-center mb-3">
+      <a class="btn btn-info me-2" [routerLink]="['info']">Info</a>
+      <a class="btn btn-warning" [routerLink]="['edit']">Edit</a>
+    </div>
 
-  <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
+  </div>
 </div>

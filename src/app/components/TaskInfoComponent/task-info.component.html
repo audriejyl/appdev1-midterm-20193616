@@ -1,7 +1,10 @@
-<div *ngIf="task">
-  <p><strong>Title:</strong> {{ task.title }}</p>
-  <p><strong>Description:</strong> {{ task.description }}</p>
-  <p><strong>Due Date:</strong> {{ task.dueDate }}</p>
-  <p><strong>Status:</strong> {{ task.status }}</p>
-  <p><strong>Priority:</strong> {{ task.priority }}</p>
+<div class="container d-flex justify-content-center mt-5">
+  <div *ngIf="task" class="task-card">
+    <h2 class="text-center mb-3">Task Detail</h2>
+    <p><strong>Title:</strong> {{ task.title }}</p>
+    <p><strong>Description:</strong> {{ task.description }}</p>
+    <p><strong>Due Date:</strong> {{ task.dueDate }}</p>
+    <p><strong>Status:</strong> {{ task.status }}</p>
+    <p><strong>Priority:</strong> {{ task.priority }}</p>
+  </div>
 </div>
