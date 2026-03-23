@@ -1,0 +1,25 @@
+<div class="container mt-4">
+  <h2>Add Task</h2>
+
+  <form (ngSubmit)="addTask()">
+    <input class="form-control mb-2" [(ngModel)]="task.title" name="title" placeholder="Title" required>
+
+    <textarea class="form-control mb-2" [(ngModel)]="task.description" name="description" placeholder="Description"></textarea>
+
+    <input type="date" class="form-control mb-2" [(ngModel)]="task.dueDate" name="dueDate">
+
+    <select class="form-control mb-2" [(ngModel)]="task.status" name="status">
+      <option>Pending</option>
+      <option>In Progress</option>
+      <option>Completed</option>
+    </select>
+
+    <select class="form-control mb-2" [(ngModel)]="task.priority" name="priority">
+      <option>Low</option>
+      <option>Medium</option>
+      <option>High</option>
+    </select>
+
+    <button class="btn btn-primary">Add Task</button>
+  </form>
+</div>

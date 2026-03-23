@@ -1,0 +1,15 @@
+.container {
+  max-width: 900px;
+}
+
+table td, table th {
+  vertical-align: middle;
+}
+
+.btn-sm {
+  margin-right: 5px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}

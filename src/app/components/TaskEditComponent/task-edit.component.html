@@ -1,0 +1,25 @@
+<div *ngIf="task">
+  <h3>Edit Task</h3>
+
+  <form (ngSubmit)="updateTask()">
+    <input class="form-control mb-2" [(ngModel)]="task.title" name="title">
+
+    <textarea class="form-control mb-2" [(ngModel)]="task.description" name="description"></textarea>
+
+    <input type="date" class="form-control mb-2" [(ngModel)]="task.dueDate" name="dueDate">
+
+    <select class="form-control mb-2" [(ngModel)]="task.status" name="status">
+      <option>Pending</option>
+      <option>In Progress</option>
+      <option>Completed</option>
+    </select>
+
+    <select class="form-control mb-2" [(ngModel)]="task.priority" name="priority">
+      <option>Low</option>
+      <option>Medium</option>
+      <option>High</option>
+    </select>
+
+    <button class="btn btn-success">Update</button>
+  </form>
+</div>
